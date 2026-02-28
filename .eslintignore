@@ -1,0 +1,8 @@
+*.js
+node_modules/
+.next/
+out/
+build/
+lint-report.json
+lint_output.txt
+lint_report_fixed.txt
