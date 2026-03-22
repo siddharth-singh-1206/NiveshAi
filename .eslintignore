@@ -1,8 +1,7 @@
-*.js
+# Eslint ignore file
 node_modules/
 .next/
-out/
-build/
-lint-report.json
-lint_output.txt
-lint_report_fixed.txt
+dist/
+*.js
+!next.config.js
+!tailwind.config.js

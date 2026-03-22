@@ -127,7 +127,7 @@ export default function PricePrediction({ prediction }: PricePredictionProps) {
             <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
                 <p className="text-xs text-yellow-800">
                     <strong>Disclaimer:</strong> ML predictions are for informational purposes only.
-                    Past performance doesn't guarantee future results. Always do your own research.
+                    Past performance doesn&apos;t guarantee future results. Always do your own research.
                 </p>
             </div>
         </div>

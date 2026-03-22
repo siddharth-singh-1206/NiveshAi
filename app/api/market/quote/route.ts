@@ -19,12 +19,13 @@ export async function GET(request: NextRequest) {
             return NextResponse.json({ quotes });
         } else {
             // Fetch single quote
-            // @ts-ignore
+            // @ts-expect-error - yahoo-finance returns a broader quote object than the default type allows
             const quote = await yahooFinance.quote(symbol);
             return NextResponse.json({ quote });
         }
-    } catch (error: any) {
+    } catch (error) {
         console.error('Yahoo Finance API Error:', error);
-        return NextResponse.json({ error: 'Failed to fetch stock data', details: error.message }, { status: 500 });
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+        return NextResponse.json({ error: 'Failed to fetch stock data', details: errorMessage }, { status: 500 });
     }
 }
